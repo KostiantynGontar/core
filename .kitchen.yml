@@ -22,5 +22,5 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[mysql::server]
+    - recipe[core]
     attributes:

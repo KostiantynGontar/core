@@ -6,4 +6,4 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-include "mysql::server"
+include_recipe "mysql::server"

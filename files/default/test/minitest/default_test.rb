@@ -9,3 +9,4 @@ describe_recipe 'jboss::default' do
       group("jboss").must_exist
     end
   end
+end
