@@ -6,3 +6,4 @@ description      'Installs/Configures core'
 long_description 'Installs/Configures core'
 version          '0.1.0'
 
+depends "mysql"

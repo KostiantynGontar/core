@@ -18,3 +18,4 @@ gem 'test-kitchen'
 gem 'kitchen-vagrant'
 gem 'minitest-chef-handler'
 gem "rspec"
+gem "foodcritic"
