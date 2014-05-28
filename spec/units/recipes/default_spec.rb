@@ -1,16 +1,16 @@
 require 'chefspec'
 require 'chefspec/berkshelf'
 
-describe 'jboss::default' do
+describe 'core::default' do
 
   let(:chef_run) { ChefSpec::Runner.new.converge(described_recipe) }
 
-  it 'set jboss attributes' do
-    expect(chef_run.node['jboss']['user']).to eq('jboss')
+  it 'update ports' do 
+    expect(chef_run).to include_recipe('freebsd::portsnap')
   end
 
-  it 'creates a user' do
-    expect(chef_run).to create_user('jboss')
-    expect(chef_run).to create_group('jboss')
-  end 
+  it 'installs vim' do
+    expect(chef_run).to install_package('vim')
+  end
+
 end

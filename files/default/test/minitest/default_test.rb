@@ -1,12 +1,8 @@
 require 'minitest/spec'
 
-describe_recipe 'jboss::default' do
-  describe "users and groups" do 
-    it "creates a user for jboss" do
-      user("jboss").must_exist
-    end
-    it "creates the jboss group" do
-      group("jboss").must_exist
-    end
+describe_recipe 'core::default' do
+
+  describe "Install package Vim" do 
+    package("vim").must_be_installed
   end
 end

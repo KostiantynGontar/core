@@ -19,3 +19,6 @@ gem 'kitchen-vagrant'
 gem 'minitest-chef-handler'
 gem "rspec"
 gem "foodcritic"
+gem 'chefspec'
+#gem 'chefspec/berkshelf'
+
