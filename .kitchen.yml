@@ -18,10 +18,10 @@ platforms:
     driver_config:
       box: freebsd-9.2
       box_url: http://files.wunki.org/freebsd-9.2-amd64-wunki.box
-  - name: ubuntu-12.04
+  - name: debian-7.4
     driver_config:
-      box: canonical-ubuntu-12.04
-      box_url: http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
+      box: debian-wheezy-7.4
+      box_url: https://dl.dropboxusercontent.com/s/3jz559mjz2aw4gs/debian-wheezy-64-vanilla.box
 
 suites:
   - name: default
@@ -29,3 +29,10 @@ suites:
     - recipe[core]
     - recipe[minitest-handler]
     attributes:
+  - name: jenkins
+    run_list:
+    - recipe[core]
+    - recipe[minitest-handler]
+    attributes:
+    excludes:
+    - freebsd-9.2
