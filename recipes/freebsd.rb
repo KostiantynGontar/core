@@ -13,3 +13,4 @@ freebsd_port_options"vim" do
   action :create
 end
 
+include_recipe "default"
