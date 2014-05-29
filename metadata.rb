@@ -7,5 +7,3 @@ long_description 'Installs/Configures core application'
 version          '0.1.0'
 
 depends "freebsd"
-depends "java"
-depends "jenkins"
