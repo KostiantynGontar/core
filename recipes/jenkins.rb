@@ -6,8 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 
-include_recipe "freebsd" if platform?("freebsd")
+include_recipe "default" 
+include_recipe "java" 
+include_recipe "jenkins" 
 
-package "vim" do
-  action :install
-end

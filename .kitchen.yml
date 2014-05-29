@@ -19,9 +19,6 @@ platforms:
       box: freebsd-9.2
       box_url: http://files.wunki.org/freebsd-9.2-amd64-wunki.box
   - name: debian-7.4
-    driver_config:
-      box: debian-wheezy-7.4
-      box_url: https://dl.dropboxusercontent.com/s/3jz559mjz2aw4gs/debian-wheezy-64-vanilla.box
 
 suites:
   - name: default
@@ -31,8 +28,7 @@ suites:
     attributes:
   - name: jenkins
     run_list:
-    - recipe[core]
-    - recipe[minitest-handler]
+    - recipe[core::jenkins]
     attributes:
     excludes:
     - freebsd-9.2
